@@ -1,0 +1,22 @@
+{
+  "name": "m3-site",
+  "version": "0.0.1",
+  "description": "M3 Site",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "$(which node) index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m3-org/m3-site.git"
+  },
+  "author": "Avaer Kazmer <a@modules.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m3-org/m3-site/issues"
+  },
+  "homepage": "https://github.com/m3-org/m3-site#readme"
+}
