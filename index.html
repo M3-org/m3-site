@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .wrap {
+  display: flex;
+}
+header {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: #FFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  align-items: center;
+  user-select: none;
+  z-index: 1;
+}
+header .icon {
+  height: 25px;
+  margin: 0 10px;
+}
+header .nav {
+  display: flex;
+  height: 100%;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header .nav:hover, header .nav.open {
+  border-bottom-color: #ef5350;
+}
+header .nav i {
+  display: inline-block;
+  padding: 0 7px;
+  padding-top: 2px;
+}
+</style>
+</head>
+<body>
+<header id=header>
+  <a href="https://m3.gg">
+    <img class=icon src="logo.svg"/>
+  </a>
+  <a href="/" class="nav">Events</a>
+  <a href="/crew" class="nav">Crew</a>
+</header>
+<div class=hero>
+  <div class=wrap>
+    <h1>We make virtual events</h1>
+    <p></p>
+  </div>
+</div>
+<h1>The crew</h1>
+<h3>avaer</h3>
+<h3>jin</h3>
+<h3>revofire</h3>
+<h3>boomboxhead</h3>
+</body>
+</html>
