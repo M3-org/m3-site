@@ -63,7 +63,73 @@ header .nav i {
   justify-content: center;
 }
 .grid-section {
-  width: 400px;
+  /* width: 400px; */
+  flex: 1;
+}
+.grid-block {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.grid-block.dark {
+  background-color: #29b6f6;
+  color: #FFF;
+}
+.grid-block.light {
+  background-color: #FFF;
+}
+.grid-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.grid-block h1,
+.grid-block h2,
+.grid-block h3,
+.grid-block p
+{
+  margin: 0;
+}
+.grid-block h1 {
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-bottom: 3px solid currentColor;
+}
+.grid-block.light h2 {
+  color: #29b6f6;
+}
+.grid-block p {
+  font-size: 20px;
+}
+.screenshots {
+  display: flex;
+  justify-content: space-between;
+}
+.screenshots .screenshot {
+  height: 100px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 7px 15px;
+  background-color: #ef5350;
+  border: 0;
+  border-radius: 8px;
+  color: #FFF;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+button:active {
+  background-color: #e53935;
+}
+.member {
+  display: flex;
+  padding: 10px;
+}
+.member img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }
     </style>
   </head>
@@ -83,16 +149,49 @@ header .nav i {
     </div>
     <div class=grid>
       <div class=grid-section>
-        <h1>Join an event</h1>
-        <h3>M3 Oct 32nd</h3>
-        <button>Buy tickets</button>
+        <div class="grid-block dark">
+          <h1>M3 Meets</h1>
+          <p>Join and discuss the future of WebXR and the M3 organization.</p>
+        </div>
+        <div class="grid-block light">
+          <div class=grid-header>
+            <h2>
+              Oct 20th 2019<br>
+              12:00 PST<br>
+              Mozilla Hubs<br>
+            </h2>
+            <button>Get tickets</button>
+          </div>
+          <div class=screenshots>
+            <img class=screenshot src="https://user-images.githubusercontent.com/29695350/64819288-8290e500-d573-11e9-83fe-8fbe1fe9ae70.gif">
+            <img class=screenshot src="https://user-images.githubusercontent.com/29695350/64819288-8290e500-d573-11e9-83fe-8fbe1fe9ae70.gif">
+            <img class=screenshot src="https://user-images.githubusercontent.com/29695350/64819288-8290e500-d573-11e9-83fe-8fbe1fe9ae70.gif">
+          </div>
+        </div>
       </div>
       <div class=grid-section>
-        <h1>The crew</h1>
-        <h3>avaer</h3>
-        <h3>jin</h3>
-        <h3>revofire</h3>
-        <h3>boomboxhead</h3>
+        <div class="grid-block dark">
+          <h1>The crew</h1>
+          <p>These are the folks who make M3.</p>
+        </div>
+        <div class="grid-block light">
+          <div class=member>
+            <img src="https://avatars3.githubusercontent.com/u/32600939">
+            <h3>jin</h3>
+          </div>
+          <div class=member>
+            <img src="https://avatars1.githubusercontent.com/u/6926057">
+            <h3>avaer</h3>
+          </div>
+          <div class=member>
+            <img src="https://avatars1.githubusercontent.com/u/52365539">
+            <h3>revofire</h3>
+          </div>
+          <div class=member>
+            <img src="https://avatars1.githubusercontent.com/u/7612104">
+            <h3>boomboxhead</h3>
+          </div>
+        </div>
       </div>
     </div>
   </body>

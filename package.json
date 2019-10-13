@@ -7,7 +7,7 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "$(which node) index.js"
+    "start": "sudo $(which node) index.js"
   },
   "repository": {
     "type": "git",

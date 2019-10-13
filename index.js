@@ -8,4 +8,4 @@ const app = express();
 app.use(express.static(__dirname));
 
 http.createServer(app)
-  .listen(process.env.PORT || 8000)
+  .listen(80)
