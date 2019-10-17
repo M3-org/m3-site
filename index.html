@@ -45,6 +45,17 @@ header .nav i {
   padding: 0 7px;
   padding-top: 2px;
 }
+
+.flex {
+  display:flex;
+  justify-content: space-between;
+  justify-content: row;
+}
+
+.column {
+  flex-direction:column!important;
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -56,7 +67,8 @@ header .nav i {
 }
 .hero .wrap {
   display: flex;
-  width: 800px;
+  width: 100%;
+  padding:30px;
 }
 .grid {
   display: flex;
@@ -68,7 +80,6 @@ header .nav i {
 }
 .grid-block {
   display: flex;
-  flex-direction: column;
   padding: 30px;
 }
 .grid-block.dark {
@@ -103,13 +114,16 @@ header .nav i {
 }
 .screenshots {
   display: flex;
+  flex-direction:column;
   justify-content: space-between;
 }
 .screenshots .screenshot {
-  height: 100px;
+  width: 100%;
   margin-bottom: 10px;
 }
 button {
+  max-width:225px;
+  width:100%;
   padding: 7px 15px;
   background-color: #ef5350;
   border: 0;
@@ -122,6 +136,24 @@ button {
 button:active {
   background-color: #e53935;
 }
+
+button:hover {
+  background-color:grey;
+}
+
+.content, .screenshots {
+  flex-basis:63%;
+}
+
+.crew, .event {
+  flex-basis:33%;
+}
+
+.event, .screenshots {
+  font-size:1.5rem;
+  margin-bottom:30px;
+}
+
 .member {
   display: flex;
   padding: 10px;
@@ -135,6 +167,16 @@ button:active {
   width: 100px;
   height: 100px;
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .grid, .flex {
+    flex-direction:column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
 }
     </style>
   </head>
@@ -152,51 +194,55 @@ button:active {
         <p></p>
       </div>
     </div>
-    <div class=grid>
-      <div class=grid-section>
-        <div class="grid-block dark">
+    <div class="grid">
+      <div class="grid-section content">
+        <div class="grid-block dark column">
           <h1>M3 Meets</h1>
           <p>Join and discuss the future of WebXR and the M3 organization.</p>
         </div>
-        <div class="grid-block light">
-          <div class=grid-header>
-            <h2>
+        <div class="grid-block light flex">
+          <div class="event">
+            <div class="grid-header"><h2>Next Event</h2></div>
+            <div class="grid-header"><h3>
               Oct 20th 2019<br>
               12:00 PST<br>
               Mozilla Hubs<br>
-            </h2>
-            <button>Get tickets</button>
+            </h3></div>
+            <a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=Mm9rcmt0ZTE1dXU1ZmhyaGRzZDk0NzUzNGRfMjAxOTEwMjBUMTkwMDAwWiBtZXRhdmVyc2VtYWtlcnNtYXN0ZXJtaW5kQG0&tmsrc=metaversemakersmastermind%40gmail.com&scp=ALL"><button>RSVP</button></a>
           </div>
-          <div class=screenshots>
-            <img class=screenshot src="https://user-images.githubusercontent.com/29695350/64819288-8290e500-d573-11e9-83fe-8fbe1fe9ae70.gif">
-            <img class=screenshot src="https://user-images.githubusercontent.com/29695350/64819288-8290e500-d573-11e9-83fe-8fbe1fe9ae70.gif">
-            <img class=screenshot src="https://user-images.githubusercontent.com/29695350/64819288-8290e500-d573-11e9-83fe-8fbe1fe9ae70.gif">
+          <div class="screenshots">
+            <div class="grid-header">
+            <h2>From Previous Events</h2>
+            </div>
+            <img class="screenshot" src="https://user-images.githubusercontent.com/29695350/64819288-8290e500-d573-11e9-83fe-8fbe1fe9ae70.gif">
+            <img class="screenshot" src="https://uploads-prod.reticulum.io/files/224469e4-295d-4911-863a-9b89803b0be6.png?token=f35d82cd10923bb8bdb504c9f8be416b">
+            <img class="screenshot" src="https://uploads-prod.reticulum.io/files/174b1cc4-5694-46dd-9c87-1698e8785a38.png?token=499369b7859cf81cfff9f1c0157dc714">
           </div>
         </div>
       </div>
-      <div class=grid-section>
-        <div class="grid-block dark">
+      <div class="grid-section crew">
+        <div class="grid-block dark column">
           <h1>The crew</h1>
           <p>These are the folks who make M3.</p>
         </div>
-        <div class="grid-block light">
-          <a href="https://github.com/madjin" class=member>
+        <div class="grid-block light column">
+          <a href="https://github.com/madjin" class="member">
             <img src="https://avatars3.githubusercontent.com/u/32600939">
             <h3>jin</h3>
           </a>
-          <a href="https://github.com/modulesio" class=member>
+          <a href="https://github.com/modulesio" class="member">
             <img src="https://avatars1.githubusercontent.com/u/6926057">
             <h3>avaer</h3>
           </a>
-          <a href="https://github.com/kasenvr" class=member>
+          <a href="https://github.com/kasenvr" class="member">
             <img src="https://avatars1.githubusercontent.com/u/52365539">
             <h3>revofire</h3>
           </a>
-          <a href="https://github.com/gm3" class=member>
+          <a href="https://github.com/gm3" class="member">
             <img src="https://avatars1.githubusercontent.com/u/7612104">
             <h3>boomboxhead</h3>
           </a>
-          <a href="https://github.com/onisage" class=member>
+          <a href="https://github.com/onisage" class="member">
             <img src="https://avatars2.githubusercontent.com/u/53308620">
             <h3>sage</h3>
           </a>
