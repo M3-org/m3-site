@@ -4,7 +4,7 @@
   "description": "M3 Site",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^5.2.1"
   },
   "scripts": {
     "start": "sudo $(which node) index.js"
